@@ -3,6 +3,17 @@
 
 <suite name="TestNG Regression Suite" verbose="3" parallel="tests"
 	thread-count="2">
+	<listeners>
+		<listener
+		
+			class-name="com.qa.opencartListener.ExtentReportListener" />
+			
+		 <listener
+			class-name="com.qa.opencartListener.TestAllureListener" /> 
+			</listeners>
+		<!-- <listener
+			class-name="com.qa.opencart.listeners.AnnotationTransformer" /> -->
+	
 
 	<parameter name="password" value="random"/>
 

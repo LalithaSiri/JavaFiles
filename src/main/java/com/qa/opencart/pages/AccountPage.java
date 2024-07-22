@@ -16,14 +16,14 @@ public class AccountPage
 	protected By headerElements= By.cssSelector("#content h2");
 	protected By logoutMessage= By.cssSelector("#content h1");
 	protected By logOutLink = By.linkText("Logout");
-	
+	protected By logoutTitle= By.cssSelector("#content h1");
 	
 public AccountPage(WebDriver driver) {
 	this.driver=driver;
 	elementUtility = new WebElementUtility(driver);
 }	
 	
-public String getAccountPageTitle() {
+public String getPageTitle() {
 	
 	return elementUtility.getPageTitle();
 }	

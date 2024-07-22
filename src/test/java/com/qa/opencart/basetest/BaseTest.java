@@ -10,6 +10,7 @@ import com.qa.opencart.driverinti.DriverFactory;
 import com.qa.opencart.pages.AccountPage;
 import com.qa.opencart.pages.LoginAccountPage;
 import com.qa.opencart.pages.RegisterUserPage;
+import com.qa.opencart.utilities.WebElementUtility;
 
 
 public class BaseTest {
@@ -20,8 +21,10 @@ public class BaseTest {
 	protected LoginAccountPage loginPage;
 	protected AccountPage accountPage;
 	protected RegisterUserPage registerPage;
+	protected WebElementUtility elementUtility;
 
 @BeforeTest
+
 	public void setUp() throws Exception{
 		factory= new DriverFactory();
 		
@@ -30,6 +33,8 @@ public class BaseTest {
 		
 		driver= factory.initDriver(prop);
 		loginPage=new LoginAccountPage(driver);
+		 elementUtility= new WebElementUtility(driver);
+		 accountPage= new AccountPage(driver);
 
 	}
 

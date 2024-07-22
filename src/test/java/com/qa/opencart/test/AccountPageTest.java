@@ -13,7 +13,7 @@ public class AccountPageTest extends BaseTest {
 	@Test
 	public void validateHeaderTile() {
 		accountPage=loginPage.loginToAccount(prop.getProperty("userName"), prop.getProperty("password"));
-		Assert.assertEquals(accountPage.getHeaderElements(), AppConstants.LISTACTUAL);
+		Assert.assertEquals(accountPage.getHeaderElements(), AppConstants.ACCOUNTS_PAGE_TITLE);
 		
 		
 		

@@ -34,7 +34,9 @@ findWebElement(locator).click();
 }
 
 public String getPageTitle() {
+	System.out.println("The Title is "+driver.getTitle());
 	return driver.getTitle();
+	
 	
 }
 public List<WebElement> getListElements(By locator) {
